@@ -18,9 +18,16 @@ public class ControllerUser {
 	
 	@GetMapping("/Usuario")
 	public List<UserDTO> getListaUsuarios() {
-		return serviceUser.getListaUsuariosDummy();
+		return serviceUser.getListaUsuarios();
 	}
 
+	@GetMapping("/UsuarioMayores2")
+	public List<UserDTO> getListaUsuariosAgeGreaterThan2() {
+		return serviceUser.getListaUsuariosAgeGreaterThan2();
+	}
+	
+	
+	
 //	public UserDTO mapUserEntityToUserDTO(User userEntity){
 //		UserDTO userDTO = new UserDTO();
 //		

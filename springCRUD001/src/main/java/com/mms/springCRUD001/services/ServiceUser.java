@@ -16,13 +16,22 @@ public class ServiceUser {
 	@Autowired
 	UserRepository userRepository;
 
-	public List<UserDTO> getListaUsuariosDummy(){
+	public List<UserDTO> getListaUsuarios(){
 		return userRepository
 				.findAll()
 				.stream()
 				.map(user -> UserMapper.mapUserToUserDTO(user))
 				.toList();
 	}
+
+	public List<UserDTO> getListaUsuariosAgeGreaterThan2(){
+		return userRepository
+				.findUserAgeGreaterThan2()
+				.stream()
+				.map(user -> UserMapper.mapUserToUserDTO(user))
+				.toList();
+	}
+
 
 //	public List<UserDTO> getListaUsuarios(){
 //		return getListaDummy();
