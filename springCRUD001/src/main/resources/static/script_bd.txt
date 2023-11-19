@@ -1,0 +1,15 @@
+
+CREATE TABLE Users(
+   ID INT PRIMARY KEY,
+   NAME VARCHAR(255),
+   EDAD INT
+);
+
+
+
+
+INSERT INTO Users VALUES(1, 'Usuario x1', 1);
+INSERT INTO Users VALUES(2, 'Usuario u2', 2);
+INSERT INTO Users VALUES(3, 'Usuario d3', 3);
+
+
