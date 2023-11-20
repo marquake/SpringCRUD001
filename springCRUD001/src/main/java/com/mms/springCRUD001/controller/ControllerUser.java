@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.mms.springCRUD001.annotation.LogExecutionTime;
 import com.mms.springCRUD001.dto.UserDTO;
 import com.mms.springCRUD001.services.ServiceUser;
 
@@ -21,8 +22,9 @@ public class ControllerUser {
 
 	@Autowired
 	ServiceUser serviceUser;
-	
+
 	//http://localhost:8080/Usuario
+	@LogExecutionTime
 	@GetMapping("/Usuario")
 	public List<UserDTO> getListaUsuarios() {
 		return serviceUser.getListaUsuarios();
