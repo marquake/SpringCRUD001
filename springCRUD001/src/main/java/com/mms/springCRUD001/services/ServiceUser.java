@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import com.mms.springCRUD001.dto.UserDTO;
@@ -32,6 +33,13 @@ public class ServiceUser {
 				.toList();
 	}
 
+	public List<UserDTO> getListaUsuariosByPage(Pageable pagina){
+		return userRepository
+				.findUserBypPage(pagina)
+				.stream()
+				.map(user -> UserMapper.mapUserToUserDTO(user))
+				.toList();
+	}
 
 //	public List<UserDTO> getListaUsuarios(){
 //		return getListaDummy();

@@ -2,9 +2,10 @@ package com.mms.springCRUD001.repository;
 
 import java.util.List;
 
+import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
-import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
 import com.mms.springCRUD001.Entity.User;
@@ -25,4 +26,9 @@ public interface UserRepository extends JpaRepository<User, Integer>{
 			nativeQuery = true)
 	List<User> findUserAgeGreaterThan2();
 
+	@Query(	value="SELECT * FROM Users u", 
+			nativeQuery = true)
+	List<User> findUserBypPage(Pageable pagina);
+
+	
 }

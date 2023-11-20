@@ -6,10 +6,18 @@ CREATE TABLE Users(
 );
 
 
-
-
-INSERT INTO Users VALUES(1, 'Usuario x1', 1);
-INSERT INTO Users VALUES(2, 'Usuario u2', 2);
-INSERT INTO Users VALUES(3, 'Usuario d3', 3);
-
-
+INSERT INTO Users VALUES(1, 'jandro', 1);
+INSERT INTO Users VALUES(2, 'pachi', 2);
+INSERT INTO Users VALUES(3, 'delegado', 3);
+INSERT INTO Users VALUES(4, 'juan', 4);
+INSERT INTO Users VALUES(5, 'luis', 5);
+INSERT INTO Users VALUES(6, 'toni', 6);
+INSERT INTO Users VALUES(7, 'lucas', 7);
+INSERT INTO Users VALUES(8, 'fer', 8);
+INSERT INTO Users VALUES(9, 'mercho', 9);
+INSERT INTO Users VALUES(10, 'josekas', 10);
+INSERT INTO Users VALUES(12, 'brujo', 11);
+INSERT INTO Users VALUES(13, 'padillo', 12);
+INSERT INTO Users VALUES(14, 'caramelo', 13);
+INSERT INTO Users VALUES(15, 'décimas', 14);
+INSERT INTO Users VALUES(16, 'barroco', 15);
