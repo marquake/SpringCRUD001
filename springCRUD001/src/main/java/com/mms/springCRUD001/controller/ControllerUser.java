@@ -45,6 +45,16 @@ public class ControllerUser {
 		return serviceUser.getListaUsuariosByPage(pagina);
 	}
 
+	//http://localhost:8080/UsuarioByNameEdad?name=juan&edad=4
+	//http://localhost:8080/UsuarioByNameEdad?name=delegado&edad=3
+	//http://localhost:8080/UsuarioByNameEdad?name=padillo&edad=12
+	@GetMapping("/UsuarioByNameEdad")
+	public List<UserDTO> findByNameAndEdad(	@RequestParam String name, 
+											@RequestParam int edad) {
+
+		return serviceUser.findByNameAndEdad(name, edad);
+	}
+
 //	@GetMapping("/Usuario")
 //	public List<UserDTO> getListaUsuarios1() {
 //		

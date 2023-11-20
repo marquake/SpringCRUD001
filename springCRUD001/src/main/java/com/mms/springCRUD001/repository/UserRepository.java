@@ -30,5 +30,6 @@ public interface UserRepository extends JpaRepository<User, Integer>{
 			nativeQuery = true)
 	List<User> findUserBypPage(Pageable pagina);
 
-	
+	List<User> findByNameAndAge(String name, Integer edad);
+
 }

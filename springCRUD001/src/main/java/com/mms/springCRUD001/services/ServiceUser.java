@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
+import com.mms.springCRUD001.Entity.User;
 import com.mms.springCRUD001.dto.UserDTO;
 import com.mms.springCRUD001.mapper.UserMapper;
 import com.mms.springCRUD001.repository.UserRepository;
@@ -41,6 +42,15 @@ public class ServiceUser {
 				.toList();
 	}
 
+	public List<UserDTO> findByNameAndEdad(String name, Integer edad){
+		return userRepository
+				.findByNameAndAge(name, edad)
+				.stream()
+				.map(user -> UserMapper.mapUserToUserDTO(user))
+				.toList();
+	}
+
+	
 //	public List<UserDTO> getListaUsuarios(){
 //		return getListaDummy();
 //	}
